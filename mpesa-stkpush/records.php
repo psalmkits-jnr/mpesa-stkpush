@@ -1,3 +1,5 @@
+<!-- This is the page where mpesa records will be viewed.
+Therefore it will be used as the admin page to view mpesa transactions that took place and perform more actions. -->
 <!DOCTYPE html>
 <html lang="en">
 <head>

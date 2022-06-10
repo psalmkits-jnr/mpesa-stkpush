@@ -41,7 +41,7 @@ if(isset($_POST['submit'])){
   $access_token_url = 'https://sandbox.safaricom.co.ke/oauth/v1/generate?grant_type=client_credentials';
   $initiate_url = 'https://sandbox.safaricom.co.ke/mpesa/stkpush/v1/processrequest';
 
-  # callback url(link for the system to go)
+  # callback url(link for the system to go)ie where the data goes
   $CallBackURL = 'https://stark-sierra-15693.herokuapp.com/index.php/callback_url.php';  
 
   $curl = curl_init($access_token_url);
