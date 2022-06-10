@@ -5,12 +5,12 @@ if(isset($_POST['submit'])){
   date_default_timezone_set('Africa/Nairobi');
 
   # access token
-  $consumerKey = 'D7zajnCxmJ4oPBu6vdBW7PGILK39mrIs'; //Fill with your app Consumer Key
-  $consumerSecret = 'qBe74z2STnxIB04O'; // Fill with your app Secret
+  $consumerKey = 'D7zajnCxmJ4oPBu6vdBW7PGILK39mrIs'; //Fill with your app Consumer Key(abel)replace with theirs
+  $consumerSecret = 'qBe74z2STnxIB04O'; // Fill with your app Secret(abel)replace with theirs
 
   # define the variales
   # provide the following details, this part is found on your test credentials on the developer account
-  $BusinessShortCode = '600981';
+  $BusinessShortCode = '5281521';
   $Passkey = 'bfb279f9aa9bdbcf158e97dd71a467cd2e0c893059b10f78e6b72ada1ed2c919';  
   
   /*
@@ -23,8 +23,8 @@ if(isset($_POST['submit'])){
     for developer/test accounts, this money will be reversed automatically by midnight.
   */
   
-   $PartyA = $_POST['phone']; // This is your phone number, 
-  $AccountReference = 'Off campus';
+   $PartyA = $_POST['phone']; // This is your phone number,(CLIENT) 
+  $AccountReference = 'ARTISANDUKA';
   $TransactionDesc = 'Payment of';
   $Amount = $_POST['amount'];;
  
@@ -41,8 +41,8 @@ if(isset($_POST['submit'])){
   $access_token_url = 'https://sandbox.safaricom.co.ke/oauth/v1/generate?grant_type=client_credentials';
   $initiate_url = 'https://sandbox.safaricom.co.ke/mpesa/stkpush/v1/processrequest';
 
-  # callback url
-  $CallBackURL = 'https://346b-2c0f-fe38-2403-9d03-598a-2adb-3f6c-7c3b.eu.ngrok.io/MPESA/Daraja/daraja-tutorial/callback_url.php';  
+  # callback url(link for the system to go)
+  $CallBackURL = 'https://stark-sierra-15693.herokuapp.com/index.php/callback_url.php';  
 
   $curl = curl_init($access_token_url);
   curl_setopt($curl, CURLOPT_HTTPHEADER, $headers);
@@ -68,7 +68,7 @@ if(isset($_POST['submit'])){
     'BusinessShortCode' => $BusinessShortCode,
     'Password' => $Password,
     'Timestamp' => $Timestamp,
-    'TransactionType' => 'CustomerPayBillOnline',
+    'TransactionType' => 'TillNoOnlinePayment',
     'Amount' => $Amount,
     'PartyA' => $PartyA,
     'PartyB' => $BusinessShortCode,
