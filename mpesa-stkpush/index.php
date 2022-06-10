@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Lipa na mpesa</title>
+    <title>STK_PUSH</title>
     <link
       href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
       rel="stylesheet"
@@ -79,13 +79,13 @@
         <div class="d-flex flex-row justify-content-around">
           <div class="mpesa"><span>Mpesa </span></div>
           <div class="records-tab"> <a class="records-tab" href="./records.php" style="text-decoration:none; color:grey;"> <span>Records</span> </a>  </div>
-          <div style="display:none;"><span>Card</span></div>
+          <!-- <div style="display:none;"><span>Card</span></div> -->
         </div>
         <div class="media mt-4 pl-2">
           <img src="./images/1200px-M-PESA_LOGO-01.svg.png" class="mr-3" height="75" />
-          <div class="media-body">
-            <h6 class="mt-1">Enter Amount & Number</h6>
-          </div>
+          <!-- <div class="media-body">
+            <h6 class="mt-1">Enter Mobile Number To Deduct The Amount:</h6>
+          </div> -->
         </div>
         <div class="media mt-3 pl-2">
                           <!--bs5 input-->
@@ -102,7 +102,7 @@
                 </div>
              
                 <div class="col-12">
-                  <button type="submit" class="btn btn-success" name="submit" value="submit">Donate</button>
+                  <button type="submit" class="btn btn-success" name="submit" value="submit">PAY</button>
                 </div>
               </form>
               <!--bs5 input-->

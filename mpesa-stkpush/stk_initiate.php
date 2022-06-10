@@ -10,7 +10,7 @@ if(isset($_POST['submit'])){
 
   # define the variales
   # provide the following details, this part is found on your test credentials on the developer account
-  $BusinessShortCode = '5281521';
+  $BusinessShortCode = '174379';//5181521 is not activated somehow.I will change to this on application.
   $Passkey = 'bfb279f9aa9bdbcf158e97dd71a467cd2e0c893059b10f78e6b72ada1ed2c919';  
   
   /*
@@ -23,8 +23,8 @@ if(isset($_POST['submit'])){
     for developer/test accounts, this money will be reversed automatically by midnight.
   */
   
-   $PartyA = $_POST['phone']; // This is your phone number,(CLIENT) 
-  $AccountReference = 'ARTISANDUKA';
+   $PartyA = $_POST['phone']; // This is CLIENT phone number
+  $AccountReference = 'ARTISAN DUKA';
   $TransactionDesc = 'Payment of';
   $Amount = $_POST['amount'];;
  
@@ -68,7 +68,7 @@ if(isset($_POST['submit'])){
     'BusinessShortCode' => $BusinessShortCode,
     'Password' => $Password,
     'Timestamp' => $Timestamp,
-    'TransactionType' => 'TillNoOnlinePayment',
+    'TransactionType' => 'CustomerPayBillOnline',
     'Amount' => $Amount,
     'PartyA' => $PartyA,
     'PartyB' => $BusinessShortCode,
